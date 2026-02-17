@@ -2,29 +2,99 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>〇〇市ゴルフ大会</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>〇〇市民ゴルフ大会</title>
+
 <style>
-body { font-family: sans-serif; margin: 40px; }
-h1 { border-bottom: 2px solid #333; }
-.section { margin-bottom: 40px; }
-a { color: blue; }
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* 最上部写真 */
+.hero img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+}
+
+/* コンテンツ幅 */
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 28px;
+}
+
+h2 {
+  border-left: 6px solid #2c3e50;
+  padding-left: 10px;
+  margin-top: 50px;
+  font-size: 22px;
+}
+
+.item {
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.year-links {
+  margin-top: 60px;
+  padding-top: 30px;
+  border-top: 1px solid #ccc;
+}
 </style>
 </head>
 
 <body>
 
-<h1>〇〇市ゴルフ大会</h1>
-
-<div class="section">
-<h2>開催概要</h2>
-<p>開催日：2026年〇月〇日</p>
-<p>会場：〇〇カントリークラブ</p>
+<!-- 最上部写真 -->
+<div class="hero">
+  <img src="hero.jpg" alt="ゴルフ大会イメージ写真">
 </div>
 
-<div class="section">
-<h2>申込方法</h2>
-<p><a href="entry_2026.pdf">申込書ダウンロード</a></p>
-<p>メールまたはFAXでお送りください。</p>
+<div class="container">
+
+<h1>〇〇市民ゴルフ大会</h1>
+
+<h2>開催概要</h2>
+<div class="item">開催日：2026年〇月〇日</div>
+<div class="item">場所：△△カントリー</div>
+
+<h2>申し込み方法</h2>
+<div class="item">
+  <a href="entry_2026.pdf" target="_blank">
+  申込書ダウンロード
+  </a>
+</div>
+<div class="item">メールまたはFAXでお送りください。</div>
+<div class="item">送り先：example@example.jp</div>
+<div class="item">FAX：00-0000-0000</div>
+
+<div class="year-links">
+<h2>年別開催</h2>
+<div class="item">
+  <a href="2026/">2026年大会はこちら</a>
+</div>
+</div>
+
 </div>
 
 </body>
