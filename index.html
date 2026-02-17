@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>〇〇市民ゴルフ大会</title>
+<title>〇〇市民ゴルフ大会 2026</title>
 
 <style>
 body {
@@ -19,44 +19,51 @@ body {
   overflow: hidden;
 }
 
+/* 画像（最背面） */
 .hero img {
   width: 100%;
-  height: 400px;
+  height: 420px;
   object-fit: cover;
   display: block;
+  position: relative;
+  z-index: 0;
 }
 
-/* 黒オーバーレイ */
-.hero::after {
-  content: "";
+/* 黒オーバーレイ（中間層） */
+.overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
 }
 
-/* タイトル全体 */
+/* タイトル（最前面） */
 .hero-text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: #ffffff;
   text-align: center;
+  z-index: 2;
   animation: fadeIn 1.5s ease forwards;
   opacity: 0;
 }
 
-/* メインタイトル */
 .hero-text h1 {
-  font-size: 42px;
+  font-size: 44px;
   margin: 0;
+  font-weight: 900;
   letter-spacing: 2px;
+  text-shadow:
+    0 0 5px rgba(0,0,0,0.8),
+    0 0 15px rgba(0,0,0,0.8),
+    2px 2px 8px rgba(0,0,0,0.9);
 }
 
-/* サブタイトル */
 .hero-text p {
   margin-top: 15px;
   font-size: 20px;
@@ -134,13 +141,14 @@ a:hover {
 
 }
 </style>
-
 </head>
+
 <body>
 
 <!-- ===== Heroエリア ===== -->
 <div class="hero">
   <img src="hero.jpg" alt="ゴルフ大会イメージ写真">
+  <div class="overlay"></div>
   <div class="hero-text">
     <h1>〇〇市民ゴルフ大会</h1>
     <p>2026年〇月〇日開催</p>
@@ -162,6 +170,11 @@ a:hover {
     <li>メールまたはFAXでお送りください。</li>
     <li>送り先：example@example.com</li>
     <li>FAX：000-000-0000</li>
+  </ul>
+
+  <h2>過去開催</h2>
+  <ul>
+    <li><a href="#">2026年大会</a></li>
   </ul>
 
 </div>
