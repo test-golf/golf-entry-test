@@ -49,7 +49,7 @@ body {
   font-weight: 900;
   margin: 0;
   font-size: clamp(20px, 5vw, 40px);
-  white-space: nowrap; /* スマホで改行させない */
+  white-space: nowrap;
 }
 
 /* ===== Container ===== */
@@ -145,16 +145,19 @@ a:hover {
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
 
+  /* ヒーロー高さを画面比率基準へ変更 */
+  .hero img {
+    height: 40vh; /* ← 画面の40%程度 */
+    min-height: 200px;
+    max-height: 320px;
+  }
+
   .map-wrapper {
     flex-direction: column;
   }
 
   .map-box {
     width: 100%;
-  }
-
-  .hero img {
-    height: 260px;
   }
 
   .container {
