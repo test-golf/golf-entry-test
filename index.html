@@ -42,12 +42,14 @@ body {
   transform: translate(-50%, -50%);
   color: #ffffff;
   text-align: center;
+  width: 90%;
 }
 
 .hero-text h1 {
-  font-size: 40px;
-  margin: 0;
   font-weight: 900;
+  margin: 0;
+  font-size: clamp(20px, 5vw, 40px);
+  white-space: nowrap; /* スマホで改行させない */
 }
 
 /* ===== Container ===== */
@@ -57,6 +59,7 @@ body {
   padding: 30px;
   background: white;
   border-radius: 8px;
+  box-sizing: border-box;
 }
 
 h2 {
@@ -70,6 +73,7 @@ h2 {
   padding: 20px;
   border-radius: 6px;
   margin-top: 15px;
+  box-sizing: border-box;
 }
 
 /* ===== Map Layout ===== */
@@ -101,6 +105,8 @@ h2 {
   border-radius: 6px;
   font-weight: bold;
   transition: 0.3s;
+  box-sizing: border-box;
+  max-width: 100%;
 }
 
 .map-link-button:hover {
@@ -119,6 +125,8 @@ h2 {
   font-size: 18px;
   margin-top: 15px;
   transition: 0.3s;
+  box-sizing: border-box;
+  max-width: 100%;
 }
 
 .form-button:hover {
@@ -146,11 +154,7 @@ a:hover {
   }
 
   .hero img {
-    height: 280px;
-  }
-
-  .hero-text h1 {
-    font-size: 26px;
+    height: 260px;
   }
 
   .container {
@@ -159,6 +163,13 @@ a:hover {
   }
 
   .form-button {
+    width: 100%;
+    font-size: 16px;
+    padding: 14px;
+    text-align: center;
+  }
+
+  .map-link-button {
     width: 100%;
     text-align: center;
   }
@@ -175,7 +186,6 @@ a:hover {
 
 <body>
 
-<!-- ===== Hero ===== -->
 <div class="hero">
   <img src="hero.jpg" alt="ゴルフ大会イメージ写真">
   <div class="overlay"></div>
@@ -190,10 +200,9 @@ a:hover {
   <h2>開催概要</h2>
   <p>
     開催日：2026年〇月〇日<br>
-    場所：△△カントリー
+    場所：飯能ゴルフクラブ（埼玉県飯能市芦苅場495）
   </p>
 
-  <!-- ===== Map ===== -->
   <div class="map-wrapper">
     <div class="map-box">
       <iframe
@@ -210,12 +219,9 @@ a:hover {
     </div>
   </div>
 
-  <!-- ===== Entry ===== -->
   <h2>申し込み方法</h2>
-<p>
-    下記いずれかよりお申込みください。
-</p>  
-  
+  <p>下記いずれかよりお申込みください。</p>
+
   <div class="notice-box">
     <strong>① PDF申込書をダウンロードし、FAXまたはメールでお申し込み</strong><br>
     ▶ <a href="entry_2026.pdf" target="_blank">申込書ダウンロード（PDF）</a><br><br>
@@ -233,7 +239,6 @@ a:hover {
     </a>
   </div>
 
-  <!-- ===== Contact ===== -->
   <h2>問合せ先</h2>
   <p>
     電話：
