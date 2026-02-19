@@ -24,7 +24,6 @@ body {
   height: 420px;
   object-fit: cover;
   display: block;
-  z-index: 0;
 }
 
 .overlay {
@@ -34,7 +33,6 @@ body {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
-  z-index: 1;
 }
 
 .hero-text {
@@ -44,7 +42,6 @@ body {
   transform: translate(-50%, -50%);
   color: #ffffff;
   text-align: center;
-  z-index: 2;
 }
 
 .hero-text h1 {
@@ -89,7 +86,14 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ===== フォームボタン ===== */
+/* ===== Map ===== */
+.map-container {
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* ===== Form Button ===== */
 .form-button {
   display: inline-block;
   padding: 16px 32px;
@@ -163,13 +167,20 @@ a:hover {
     場所：△△カントリー
   </p>
 
+  <!-- ===== Google Map ===== -->
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps/place/%E9%A3%AF%E8%83%BD%E3%82%B4%E3%83%AB%E3%83%95%E3%82%AF%E3%83%A9%E3%83%96/@35.861867,139.3562977,17z/data=!3m1!4b1!4m6!3m5!1s0x6019278f18209fb5:0x5241877def40d1db!8m2!3d35.861867!4d139.358878!16s%2Fg%2F1tf2s8j0?entry=ttu&g_ep=EgoyMDI2MDIxNi4wIKXMDSoASAFQAw%3D%3D"
+      width="100%"
+      height="350"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+  </div>
+
   <h2>申し込み方法</h2>
-<p>
-  下記いずれかで申し込みをお願いします。<br>
-  ①申込書を送付での申し込み<br>
-  ②申し込みフォームから必要事項を入力での申し込み
-</p>
-  
+
   <div class="notice-box">
     <p>
       <strong>① PDF申込書をダウンロードし、FAXまたはメールでお申し込み</strong><br>
@@ -185,7 +196,7 @@ a:hover {
       <strong>② 下記ボタンよりフォームからお申し込み</strong>
     </p>
 
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLScSZ0y8XLDBDwna15nJUlYKzHBaGyz20IeDEbVbUvbQsecLhw/viewform"
+    <a href="https://docs.google.com/forms/ここにフォームURL"
        target="_blank"
        class="form-button">
        フォームから申し込む
