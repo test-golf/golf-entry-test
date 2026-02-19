@@ -32,7 +32,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0,0,0,0.6);
 }
 
 .hero-text {
@@ -50,14 +50,9 @@ body {
   font-weight: 900;
 }
 
-.hero-text p {
-  margin-top: 10px;
-  font-size: 18px;
-}
-
 /* ===== Container ===== */
 .container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 40px auto;
   padding: 30px;
   background: white;
@@ -77,20 +72,39 @@ h2 {
   margin-top: 15px;
 }
 
-a {
-  color: #2e7d32;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* ===== Map ===== */
-.map-container {
+/* ===== Map Layout ===== */
+.map-wrapper {
+  display: flex;
   margin-top: 20px;
+  gap: 40px;
+}
+
+.map-box {
+  width: 50%;
   border-radius: 8px;
   overflow: hidden;
+}
+
+.map-box iframe {
+  width: 100%;
+  height: 350px;
+  border: 0;
+}
+
+.map-link-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 24px;
+  background-color: #2e7d32;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.map-link-button:hover {
+  background-color: #1b5e20;
 }
 
 /* ===== Form Button ===== */
@@ -111,15 +125,25 @@ a:hover {
   background-color: #1b5e20;
 }
 
-/* ===== Footer ===== */
-.footer {
-  text-align: center;
-  padding: 20px;
-  font-size: 14px;
-  color: #777;
+a {
+  color: #2e7d32;
+  text-decoration: none;
 }
 
-@media (max-width: 600px) {
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+
+  .map-wrapper {
+    flex-direction: column;
+  }
+
+  .map-box {
+    width: 100%;
+  }
 
   .hero img {
     height: 280px;
@@ -127,10 +151,6 @@ a:hover {
 
   .hero-text h1 {
     font-size: 26px;
-  }
-
-  .hero-text p {
-    font-size: 14px;
   }
 
   .container {
@@ -142,7 +162,13 @@ a:hover {
     width: 100%;
     text-align: center;
   }
+}
 
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #777;
 }
 </style>
 </head>
@@ -167,35 +193,36 @@ a:hover {
     場所：飯能ゴルフクラブ（埼玉県飯能市芦苅場495）
   </p>
 
-  <!-- ===== Google Map ===== -->
-  <div class="map-container">
-    <iframe
-      src="https://www.google.com/maps?q=飯能ゴルフクラブ&output=embed"
-      width="100%"
-      height="350"
-      style="border:0;"
-      allowfullscreen=""
-      loading="lazy">
-    </iframe>
+  <!-- ===== Map ===== -->
+  <div class="map-wrapper">
+    <div class="map-box">
+      <iframe
+        src="https://www.google.com/maps?q=飯能ゴルフクラブ&output=embed"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+
+      <a href="https://www.google.com/maps?q=飯能ゴルフクラブ"
+         target="_blank"
+         class="map-link-button">
+         Googleマップで開く
+      </a>
+    </div>
   </div>
 
+  <!-- ===== Entry ===== -->
   <h2>申し込み方法</h2>
 
   <div class="notice-box">
-    <p>
-      <strong>① PDF申込書をダウンロードし、FAXまたはメールでお申し込み</strong><br>
-      ▶ <a href="entry_2026.pdf" target="_blank">申込書ダウンロード（PDF）</a><br><br>
-      送付先メール：
-      <a href="mailto:example@example.com">example@example.com</a><br>
-      FAX：000-000-0000
-    </p>
+    <strong>① PDF申込書をダウンロードし、FAXまたはメールでお申し込み</strong><br>
+    ▶ <a href="entry_2026.pdf" target="_blank">申込書ダウンロード（PDF）</a><br><br>
+    送付先メール：
+    <a href="mailto:example@example.com">example@example.com</a><br>
+    FAX：000-000-0000
   </div>
 
   <div class="notice-box">
-    <p>
-      <strong>② 下記ボタンよりフォームからお申し込み</strong>
-    </p>
-
+    <strong>② 下記ボタンよりフォームからお申し込み</strong><br>
     <a href="https://docs.google.com/forms/ここにフォームURL"
        target="_blank"
        class="form-button">
@@ -203,6 +230,7 @@ a:hover {
     </a>
   </div>
 
+  <!-- ===== Contact ===== -->
   <h2>問合せ先</h2>
   <p>
     電話：000-000-0000<br>
