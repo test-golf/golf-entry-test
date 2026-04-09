@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>〇〇市民ゴルフ大会 2026</title>
 
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
 body {
     font-family: Arial, sans-serif;
@@ -12,9 +15,7 @@ body {
     padding: 0;
 }
 
-/* =========================
-   HEROエリア
-========================= */
+/* HERO */
 .hero {
     position: relative;
     height: 60vh;
@@ -25,15 +26,13 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
 }
 
 .hero::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.55);
-    z-index: 1;
+    background: rgba(0,0,0,0.55);
 }
 
 .hero-title {
@@ -41,53 +40,36 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #ffffff;
+    color: #fff;
     font-size: 3rem;
     font-weight: bold;
     text-align: center;
-    text-shadow: 0 4px 12px rgba(0,0,0,0.9);
-    z-index: 2;
-    white-space: nowrap;
 }
 
-/* =========================
-   コメントボックス
-========================= */
+/* コメント */
 .intro-box {
     max-width: 900px;
     margin: 30px auto;
     padding: 30px;
-    background-color: #e8f5e9;
+    background: #e8f5e9;
     border: 2px solid #2e7d32;
     border-radius: 8px;
-    line-height: 1.9;
     text-align: center;
-    box-sizing: border-box;
+    line-height: 1.9;
 }
 
-/* タイトル行 */
 .intro-title {
     font-size: 22px;
     font-weight: bold;
     color: #2e7d32;
-    margin-bottom: 15px;
 }
 
-/* 通常文 */
-.intro-text {
-    margin-bottom: 15px;
-}
-
-/* 締め文 */
 .intro-footer {
     color: #2e7d32;
     font-weight: bold;
-    margin-top: 10px;
 }
 
-/* =========================
-   共通セクション
-========================= */
+/* セクション */
 section {
     padding: 40px 20px;
     max-width: 1000px;
@@ -96,44 +78,26 @@ section {
 
 h2 {
     border-bottom: 2px solid #ccc;
-    padding-bottom: 10px;
 }
 
-a {
-    color: #0066cc;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* =========================
-   ボタン
-========================= */
+/* ボタン */
 .button {
     display: inline-block;
-    padding: 15px 30px;
+    padding: 12px 25px;
     background: #0066cc;
     color: #fff;
-    text-decoration: none;
     border-radius: 5px;
-    font-size: 18px;
-    margin-top: 10px;
-    max-width: 100%;
-    box-sizing: border-box;
+    text-decoration: none;
 }
 
 .button:hover {
     background: #004999;
 }
 
-/* =========================
-   マップ
-========================= */
+/* マップ */
 .map-container {
-    margin-top: 20px;
     width: 50%;
+    margin-top: 15px;
 }
 
 .map-container iframe {
@@ -142,123 +106,77 @@ a:hover {
     border: 0;
 }
 
-/* =========================
-   スマホ対応
-========================= */
-@media (max-width: 768px) {
-
-    .hero {
-        height: 35vh;
-    }
-
-    .hero-title {
-        font-size: 1.4rem;
-        white-space: normal;
-        width: 90%;
-    }
-
-    .map-container {
-        width: 100%;
-    }
-
-    .button {
-        width: 100%;
-        text-align: center;
-        font-size: 16px;
-    }
-
-    .intro-box {
-        margin: 20px;
-        padding: 20px;
-    }
-
-    .intro-title {
-        font-size: 18px;
-    }
+/* アイコン */
+.icon {
+    margin-right: 8px;
+    color: #2e7d32;
 }
 
+/* スマホ */
+@media (max-width:768px){
+    .hero { height: 35vh; }
+    .hero-title { font-size: 1.4rem; }
+    .map-container { width: 100%; }
+    .button { width: 100%; text-align: center; }
+}
 </style>
 </head>
 
 <body>
 
-<!-- ヒーロー -->
+<!-- HERO -->
 <div class="hero">
-    <img src="hero.jpg" alt="ゴルフ大会イメージ">
+    <img src="hero.jpg">
     <div class="hero-title">〇〇市民ゴルフ大会 2026</div>
 </div>
 
 <!-- コメント -->
 <div class="intro-box">
-
-    <div class="intro-title">
-        狭山市のゴルフ愛好者の皆様へ
-    </div>
-
-    <div class="intro-text">
-        親睦と技術向上を目的とした「狭山市ゴルフ大会」を本年も開催いたします。
-    </div>
-
-    <div class="intro-text">
-        日頃の練習の成果を発揮しながら、ゴルフを通じた交流をお楽しみください。
-    </div>
-
-    <div class="intro-footer">
-        皆様のご参加を心よりお待ちしております。
-    </div>
-
+    <div class="intro-title">狭山市のゴルフ愛好者の皆様へ</div>
+    <p>親睦と技術向上を目的とした「狭山市ゴルフ大会」を本年も開催いたします。</p>
+    <p>日頃の練習の成果を発揮しながら、ゴルフを通じた交流をお楽しみください。</p>
+    <div class="intro-footer">皆様のご参加を心よりお待ちしております。</div>
 </div>
 
 <!-- 開催概要 -->
 <section>
-    <h2>開催概要</h2>
-    <p>開催日：2026年〇月〇日</p>
-    <p>場所：飯能ゴルフクラブ</p>
+    <h2><i class="fa-solid fa-calendar icon"></i>開催概要</h2>
+
+    <p><i class="fa-regular fa-clock icon"></i>開催日：2026年〇月〇日</p>
+    <p><i class="fa-solid fa-location-dot icon"></i>場所：武蔵カントリー笹井コース</p>
 
     <div class="map-container">
-        <iframe 
-            src="https://www.google.com/maps?q=飯能ゴルフクラブ&output=embed">
-        </iframe>
+        <iframe src="https://www.google.com/maps?q=武蔵カントリー笹井コース&output=embed"></iframe>
     </div>
 
     <p>
-        <a href="https://www.google.com/maps/search/?api=1&query=飯能ゴルフクラブ" target="_blank" class="button">
+        <a href="https://www.google.com/maps/search/?api=1&query=武蔵カントリー笹井コース" target="_blank" class="button">
             Googleマップで開く
         </a>
     </p>
 </section>
 
-<!-- 申し込み方法 -->
+<!-- 申し込み -->
 <section>
     <h2>申し込み方法</h2>
 
-    <p>
-    抽選会での参加申し込みをもって、正式なお申込みとなります。
-    </p>
+    <p>抽選会での参加申し込みをもって正式申込となります。</p>
 
-    <p>
-    抽選日時：〇年〇月〇日　△時～
-    </p>
-
-    <p>
-    抽選会開催場所：□□
-    </p>
+    <p><i class="fa-regular fa-clock icon"></i>抽選日時：〇年〇月〇日 △時～</p>
+    <p><i class="fa-solid fa-location-dot icon"></i>抽選会開催場所：□□</p>
 
     <div class="map-container">
-        <iframe 
-            src="https://www.google.com/maps?q=飯能ゴルフクラブ&output=embed">
-        </iframe>
+        <iframe src="https://www.google.com/maps?q=武蔵カントリー笹井コース&output=embed"></iframe>
     </div>
 
     <p>
-        <a href="https://www.google.com/maps/search/?api=1&query=飯能ゴルフクラブ" target="_blank" class="button">
+        <a href="https://www.google.com/maps/search/?api=1&query=武蔵カントリー笹井コース" target="_blank" class="button">
             Googleマップで開く
         </a>
     </p>
-    
 </section>
 
-<!-- 問合せ先 -->
+<!-- 問合せ -->
 <section>
     <h2>問合せ先</h2>
     <p>電話番号：00-0000-0000</p>
