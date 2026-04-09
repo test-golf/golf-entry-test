@@ -15,6 +15,7 @@ body {
     padding: 0;
 }
 
+/* HERO */
 .hero {
     position: relative;
     height: 60vh;
@@ -79,14 +80,19 @@ h2 {
     border-bottom: 2px solid #ccc;
 }
 
-/* ボタン */
+/* ボタン（横スクロール対策済み） */
 .button {
-    display: inline-block;
-    padding: 12px 25px;
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    margin: 15px auto 0;
+    padding: 12px;
     background: #0066cc;
     color: #fff;
     border-radius: 5px;
     text-decoration: none;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 .button:hover {
@@ -116,7 +122,6 @@ h2 {
     .hero { height: 35vh; }
     .hero-title { font-size: 1.4rem; }
     .map-container { width: 100%; }
-    .button { width: 100%; text-align: center; }
 }
 </style>
 </head>
@@ -148,11 +153,9 @@ h2 {
         <iframe src="https://www.google.com/maps?q=武蔵カントリー笹井コース&output=embed"></iframe>
     </div>
 
-    <p>
-        <a href="https://www.google.com/maps/search/?api=1&query=武蔵カントリー笹井コース" target="_blank" class="button">
-            Googleマップで開く
-        </a>
-    </p>
+    <a href="https://www.google.com/maps/search/?api=1&query=武蔵カントリー笹井コース" target="_blank" class="button">
+        Googleマップで開く
+    </a>
 </section>
 
 <!-- 申し込み -->
@@ -168,18 +171,16 @@ h2 {
         <iframe src="https://www.google.com/maps?q=狭山市役所&output=embed"></iframe>
     </div>
 
-    <p>
-        <a href="https://www.google.com/maps/search/?api=1&query=狭山市役所" target="_blank" class="button">
-            Googleマップで開く
-        </a>
-    </p>
+    <a href="https://www.google.com/maps/search/?api=1&query=狭山市役所" target="_blank" class="button">
+        Googleマップで開く
+    </a>
 </section>
 
 <!-- 問合せ -->
 <section>
-    <h2>問合せ先</h2>
-    <p>電話番号：00-0000-0000</p>
-    <p>メール：example@example.com</p>
+    <h2><i class="fa-solid fa-circle-info icon"></i>問合せ先</h2>
+    <p><i class="fa-solid fa-phone icon"></i>電話番号：00-0000-0000</p>
+    <p><i class="fa-solid fa-envelope icon"></i>メール：example@example.com</p>
 </section>
 
 </body>
