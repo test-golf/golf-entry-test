@@ -56,12 +56,33 @@ body {
 .intro-box {
     max-width: 900px;
     margin: 30px auto;
-    padding: 25px;
-    background-color: #e8f5e9; /* 薄い緑 */
-    border: 2px solid #2e7d32; /* 濃い緑枠 */
+    padding: 30px;
+    background-color: #e8f5e9;
+    border: 2px solid #2e7d32;
     border-radius: 8px;
-    line-height: 1.8;
+    line-height: 1.9;
+    text-align: center;
     box-sizing: border-box;
+}
+
+/* タイトル行 */
+.intro-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+
+/* 通常文 */
+.intro-text {
+    margin-bottom: 15px;
+}
+
+/* 締め文 */
+.intro-footer {
+    color: #2e7d32;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
 /* =========================
@@ -150,6 +171,10 @@ a:hover {
         margin: 20px;
         padding: 20px;
     }
+
+    .intro-title {
+        font-size: 18px;
+    }
 }
 
 </style>
@@ -163,15 +188,25 @@ a:hover {
     <div class="hero-title">〇〇市民ゴルフ大会 2026</div>
 </div>
 
-<!-- ===== コメント追加部分 ===== -->
+<!-- コメント -->
 <div class="intro-box">
-    狭山市のゴルフ愛好者の皆様へ<br><br>
 
-    親睦と技術向上を目的とした「狭山市ゴルフ大会」を本年も開催いたします。<br><br>
+    <div class="intro-title">
+        狭山市のゴルフ愛好者の皆様へ
+    </div>
 
-    日頃の練習の成果を発揮しながら、ゴルフを通じた交流をお楽しみください。<br><br>
+    <div class="intro-text">
+        親睦と技術向上を目的とした「狭山市ゴルフ大会」を本年も開催いたします。
+    </div>
 
-    皆様のご参加を心よりお待ちしております。
+    <div class="intro-text">
+        日頃の練習の成果を発揮しながら、ゴルフを通じた交流をお楽しみください。
+    </div>
+
+    <div class="intro-footer">
+        皆様のご参加を心よりお待ちしております。
+    </div>
+
 </div>
 
 <!-- 開催概要 -->
